@@ -32,10 +32,14 @@ export const Route = createRootRoute({
       { title: "עלינא בפיתה — חמארה ים תיכונית בראשון לציון" },
       { name: "description", content: "החמארה הראשונה בראשון לציון. בשרים על הפחמים, ערק, אווירה ים תיכונית. רוטשילד 104." },
       { name: "author", content: "עלינא" },
-      { property: "og:title", content: "עלינא בפיתה — חמארה בראשון לציון" },
-      { property: "og:description", content: "בשרים על הפחמים, ערק ואווירת רחוב שמחה. רוטשילד 104, ראשלצ." },
+      { property: "og:title", content: "עלינא בפיתה — חמארה ים תיכונית בראשון לציון" },
+      { property: "og:description", content: "החמארה הראשונה בראשון לציון. בשרים על הפחמים, ערק, אווירה ים תיכונית. רוטשילד 104." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
+      { name: "twitter:title", content: "עלינא בפיתה — חמארה ים תיכונית בראשון לציון" },
+      { name: "twitter:description", content: "החמארה הראשונה בראשון לציון. בשרים על הפחמים, ערק, אווירה ים תיכונית. רוטשילד 104." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/4a79d990-fb13-48c7-bf29-2d99ff0e3d09/id-preview-0f703df0--6986b874-887d-47ff-b183-5ef18d897294.lovable.app-1776780950036.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/4a79d990-fb13-48c7-bf29-2d99ff0e3d09/id-preview-0f703df0--6986b874-887d-47ff-b183-5ef18d897294.lovable.app-1776780950036.png" },
     ],
     links: [
       {
