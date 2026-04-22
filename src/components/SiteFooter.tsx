@@ -2,39 +2,40 @@ import { Link } from "@tanstack/react-router";
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-border/60 bg-card/40 mt-24">
+    <footer className="border-t-2 border-foreground bg-foreground text-background mt-24">
       <div className="container mx-auto px-5 py-14 grid gap-10 md:grid-cols-4">
         <div className="md:col-span-2">
-          <div className="flex items-center gap-2 mb-4">
-            <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-gradient-ember text-primary-foreground font-black">ע</span>
-            <span className="font-display text-2xl font-extrabold">עלינא <span className="text-primary">בפיתה</span></span>
+          <div className="flex items-center gap-3 mb-4">
+            <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-primary text-primary-foreground font-display text-2xl border-2 border-background">H</span>
+            <div className="leading-none">
+              <div className="font-display text-2xl tracking-wide text-background">HAMBURGER AMERICA</div>
+              <div className="font-serif italic text-sm text-accent -mt-1">Classic smash burgers · NYC</div>
+            </div>
           </div>
-          <p className="text-muted-foreground max-w-md leading-relaxed">
-            החמארה הראשונה בראשון לציון. אוכל רחוב על טהרת הפחמים, ערק עממי ואווירה ים תיכונית שמחה.
+          <p className="text-background/70 max-w-md leading-relaxed">
+            A love letter to the great American hamburger. Old recipes, fresh beef, hot griddles, and a soundtrack you'll like.
           </p>
-          <p className="mt-4 text-sm text-muted-foreground">כשר בשרי · בהשגחת הרבנות ראשון לציון</p>
         </div>
         <div>
-          <h4 className="font-display text-lg mb-4 text-primary">ניווט</h4>
-          <ul className="space-y-2 text-sm">
-            <li><Link to="/menu" className="text-muted-foreground hover:text-foreground">התפריט</Link></li>
-            <li><Link to="/about" className="text-muted-foreground hover:text-foreground">עלינא</Link></li>
-            <li><Link to="/events" className="text-muted-foreground hover:text-foreground">אירועים</Link></li>
-            <li><Link to="/contact" className="text-muted-foreground hover:text-foreground">צור קשר</Link></li>
+          <h4 className="font-display text-xl text-accent mb-4 tracking-wider">VISIT</h4>
+          <ul className="space-y-2 text-sm text-background/70">
+            <li>155 W Houston St</li>
+            <li>New York, NY 10012</li>
+            <li>Open daily · 11AM — 10PM</li>
           </ul>
         </div>
         <div>
-          <h4 className="font-display text-lg mb-4 text-primary">פרטים</h4>
-          <ul className="space-y-2 text-sm text-muted-foreground">
-            <li>רוטשילד 104, ראשון לציון</li>
-            <li><a href="tel:036228055" className="hover:text-foreground">03-622-8055</a></li>
-            <li>פתוח 13:00 — 00:00</li>
-            <li><a href="https://www.instagram.com/alena.hamara" target="_blank" rel="noopener noreferrer" className="hover:text-foreground">אינסטגרם @alena.hamara</a></li>
+          <h4 className="font-display text-xl text-accent mb-4 tracking-wider">EXPLORE</h4>
+          <ul className="space-y-2 text-sm">
+            <li><Link to="/menu" className="text-background/70 hover:text-accent">The Menu</Link></li>
+            <li><Link to="/about" className="text-background/70 hover:text-accent">Our Story</Link></li>
+            <li><Link to="/events" className="text-background/70 hover:text-accent">Catering</Link></li>
+            <li><Link to="/contact" className="text-background/70 hover:text-accent">Find Us</Link></li>
           </ul>
         </div>
       </div>
-      <div className="border-t border-border/60 py-5 text-center text-xs text-muted-foreground">
-        © {new Date().getFullYear()} עלינא בפיתה · כל הזכויות שמורות
+      <div className="border-t border-background/20 py-5 text-center text-xs text-background/50">
+        © {new Date().getFullYear()} Hamburger America · Made with grease in NYC
       </div>
     </footer>
   );
