@@ -5,10 +5,10 @@ import { SiteFooter } from "@/components/SiteFooter";
 export const Route = createFileRoute("/events")({
   head: () => ({
     meta: [
-      { title: "אירועים פרטיים — עלינא בפיתה ראשון לציון" },
-      { name: "description", content: "ימי הולדת, מסיבות רווקות, ערבי חברה ואירועי חברה. עלינא מארחת אתכם בראשון לציון." },
-      { property: "og:title", content: "אירועים פרטיים בעלינא" },
-      { property: "og:description", content: "סוגרים את המקום, מארחים בסטייל ים תיכוני." },
+      { title: "Catering & Private Events — Hamburger America NYC" },
+      { name: "description", content: "Office lunches, birthdays, film wraps and full buyouts. We pack a hot griddle and we travel." },
+      { property: "og:title", content: "Catering & Events — Hamburger America" },
+      { property: "og:description", content: "We bring the griddle to you." },
     ],
   }),
   component: Events,
@@ -16,43 +16,48 @@ export const Route = createFileRoute("/events")({
 
 function Events() {
   const packages = [
-    { name: "שולחן חברים", count: "10—20 אורחים", desc: "שולחן ארוך באמצע המקום, תפריט שיירינג עשיר ובר פתוח לפי הזמנה.", price: "החל מ־150 ₪ לאדם" },
-    { name: "סגירת המקום", count: "30—70 אורחים", desc: "כל החמארה לכם. תפריט מותאם אישית, בר מלא ודיג'יי.", price: "חבילות אישיות" },
-    { name: "אירוח עסקי", count: "עד 25 אנשים", desc: "ארוחות צוות, השקות וערבי לקוחות. אווירה רגועה עם אוכל מעולה.", price: "תפריט קבוע" },
+    { name: "Office Lunch", count: "10 — 30 GUESTS", desc: "Boxed smash burger lunches delivered hot to your office. Add fries, drinks, pie.", price: "from $22 / head" },
+    { name: "Private Buyout", count: "30 — 60 GUESTS", desc: "Take over the whole counter. Custom menu, full bar, your soundtrack on the jukebox.", price: "custom quote" },
+    { name: "Griddle On-Site", count: "50 — 200 GUESTS", desc: "Film wraps, weddings, store openings. We bring the flat-top, the beef, the team.", price: "starts at $4,500" },
   ];
   return (
     <div className="min-h-screen">
       <SiteHeader />
-      <section className="container mx-auto px-5 pt-20 pb-10">
-        <p className="text-primary font-bold tracking-widest uppercase text-sm mb-3">אירועים פרטיים</p>
-        <h1 className="font-display text-5xl md:text-7xl font-black leading-[0.95]">
-          חוגגים אצלנו.
-          <br />
-          <span className="text-gradient-ember">דואגים לכל השאר.</span>
-        </h1>
-        <p className="mt-6 text-lg text-muted-foreground max-w-2xl leading-relaxed">
-          ימי הולדת, מסיבות רווקות, ערבי חברה, השקות וכל סיבה לחגוג. צוות עלינא בונה אתכם תפריט, בוחר את הבר ודואג לאווירה.
-        </p>
+      <section className="border-b-2 border-foreground">
+        <div className="container mx-auto px-5 py-20">
+          <p className="font-serif italic text-primary text-xl">Cater · Buyout · On-site grilling</p>
+          <h1 className="mt-2 font-display text-7xl md:text-9xl leading-[0.85]">
+            WE PACK
+            <br />
+            <span className="text-primary italic font-serif">the griddle</span>
+            <br />
+            & TRAVEL.
+          </h1>
+          <p className="mt-6 text-lg text-muted-foreground max-w-2xl">
+            Whether it's twelve hungry coworkers or two hundred guests on a film set, we deliver classic American burgers with the same crispy onions and warm soft buns we serve on West Houston.
+          </p>
+        </div>
       </section>
 
-      <section className="container mx-auto px-5 py-14 grid md:grid-cols-3 gap-6">
+      <section className="container mx-auto px-5 py-16 grid md:grid-cols-3 gap-6">
         {packages.map((p) => (
-          <div key={p.name} className="rounded-2xl border border-border bg-card p-8 hover:border-primary/50 transition-colors">
-            <div className="text-xs font-bold tracking-widest uppercase text-accent">{p.count}</div>
-            <h3 className="mt-2 font-display text-3xl font-black">{p.name}</h3>
+          <div key={p.name} className="bg-background border-2 border-foreground p-8 shadow-pop hover:translate-x-[-3px] hover:translate-y-[-3px] transition-transform">
+            <div className="bg-accent text-accent-foreground inline-block px-3 py-1 font-display text-xs tracking-widest border-2 border-foreground">{p.count}</div>
+            <h3 className="mt-4 font-display text-4xl">{p.name}</h3>
             <p className="mt-4 text-muted-foreground leading-relaxed">{p.desc}</p>
-            <div className="mt-6 font-display text-xl font-black text-primary">{p.price}</div>
+            <div className="mt-6 font-display text-2xl text-primary">{p.price}</div>
           </div>
         ))}
       </section>
 
-      <section className="container mx-auto px-5 py-10">
-        <div className="rounded-3xl bg-gradient-ember p-10 md:p-14 text-center shadow-ember">
-          <h2 className="font-display text-4xl md:text-5xl font-black text-primary-foreground">מתכננים אירוע?</h2>
-          <p className="mt-3 text-lg text-primary-foreground/90 max-w-xl mx-auto">חייגו אלינו ונבנה לכם חוויה מותאמת אישית.</p>
-          <div className="mt-7 flex flex-wrap justify-center gap-3">
-            <a href="tel:036228055" className="rounded-full bg-charcoal text-cream px-8 py-4 font-bold">03-622-8055</a>
-            <a href="mailto:events@alenabepita.co.il" className="rounded-full border-2 border-charcoal text-charcoal px-8 py-4 font-bold hover:bg-charcoal hover:text-cream transition-colors">events@alenabepita.co.il</a>
+      <section className="container mx-auto px-5 pb-20">
+        <div className="bg-primary text-primary-foreground p-10 md:p-16 text-center border-2 border-foreground shadow-pop">
+          <p className="font-serif italic text-accent text-xl">Let's plan it</p>
+          <h2 className="mt-2 font-display text-5xl md:text-7xl">FEED YOUR PEOPLE.</h2>
+          <p className="mt-3 text-lg text-primary-foreground/90 max-w-xl mx-auto">Send us the date, headcount and the vibe. We'll do the rest.</p>
+          <div className="mt-7 flex flex-wrap justify-center gap-4">
+            <a href="mailto:catering@hamburgeramerica.com" className="rounded-md bg-foreground text-background px-7 py-3 font-display text-xl tracking-wide border-2 border-foreground hover:bg-accent hover:text-accent-foreground transition-colors">catering@hamburgeramerica.com</a>
+            <a href="tel:+12125551234" className="rounded-md bg-accent text-accent-foreground px-7 py-3 font-display text-xl tracking-wide border-2 border-foreground hover:bg-background hover:text-foreground transition-colors">(212) 555-1234</a>
           </div>
         </div>
       </section>
